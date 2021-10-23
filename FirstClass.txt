@@ -1,0 +1,4 @@
+11/3,912,Lahore,10,8000,Islamabad,
+15/5,798,Karachi,15,9000,Islamabad,
+14/6,919,Islamabad,10,8500,Lahore,
+12/4,821,Islamabad,15,9000,Karachi
