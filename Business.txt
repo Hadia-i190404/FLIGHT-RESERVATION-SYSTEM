@@ -2,3 +2,4 @@
 15/5,798,Karachi,15,6000,Islamabad,
 14/6,919,Islamabad,13,3500,Lahore,
 13/4,821,Islamabad,15,6000,Karachi
+13/6,5846,Quetta,15,3000 Islamabad

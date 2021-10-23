@@ -1,3 +1,5 @@
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 import java.io.File;
 import java.io.BufferedReader;
@@ -27,11 +29,16 @@ public class LOGIN {
 		wfile.write(username+","+password+",");
 		wfile.close();
 	}
-	public void signup()
+	public void signup() throws UsernameTest
 	{
+		List<String> user=Arrays.asList("/","-","_");
 		Scanner s= new Scanner(System.in);
 		System.out.println("Enter Username to Sign Up");
 		username=s.next();
+		if(user.contains(username))
+		{
+			throw new UsernameTest("Invalid Special characters");
+		}
 		System.out.println("Enter Password");
 		password=s.next();
 		try
@@ -67,7 +74,14 @@ public class LOGIN {
 		if (chck==false)
 		{
 			System.out.println("YOU NEED TO SIGN UP");
+			try
+			{
 			signup();
+			}
+			catch(UsernameTest t)
+			{
+				
+			}
 		}
 		if (chck==true)
 		{
