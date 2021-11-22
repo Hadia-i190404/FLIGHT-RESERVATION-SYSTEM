@@ -2,3 +2,4 @@
 15/5,798,Karachi,16,5000,Islamabad,
 14/6,919,Islamabad,11,2500,Lahore,
 12/4,821,Islamabad,16,5000,Karachi
+12/4,1542,Peshawar,23,5000,Islamabad

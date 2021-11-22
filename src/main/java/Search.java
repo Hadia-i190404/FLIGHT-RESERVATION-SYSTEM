@@ -25,7 +25,7 @@ public class Search {
 		ptype=type;
 		source=srce;
 	}
-	public void Find() throws IOException
+	public void Find() throws IOException,PTYPEException
 	{
 		Scanner sc= new Scanner(System.in);
 		System.out.println("Enter the date for the flight");
@@ -34,6 +34,10 @@ public class Search {
 		destination=sc.next();
 		System.out.println("Enter the plane type");
 		ptype=sc.next();
+		if(ptype.length()>1)
+		{
+			throw new PTYPEException("Write one letter only");
+		}
 		System.out.println("Enter the city you want to take flight from");
 		source=sc.next();
 		
@@ -120,7 +124,7 @@ public class Search {
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-			Search se=new Search();
+	/*		Search se=new Search();
 			try {
 			se.Find();
 			}
@@ -128,6 +132,6 @@ public class Search {
 			{
 				
 			}
-	}
+	*/}
 
 }

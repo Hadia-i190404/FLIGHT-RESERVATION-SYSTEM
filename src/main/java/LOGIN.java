@@ -35,7 +35,7 @@ public class LOGIN {
 		Scanner s= new Scanner(System.in);
 		System.out.println("Enter Username to Sign Up");
 		username=s.next();
-		if(user.contains(username))
+		if(username.contains((CharSequence) user))
 		{
 			throw new UsernameTest("Invalid Special characters");
 		}

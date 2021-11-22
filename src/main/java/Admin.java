@@ -44,7 +44,7 @@ public class Admin {
 		Scanner s= new Scanner(System.in);
 		System.out.println("Enter Username to Sign Up");
 		username=s.next();
-		if(user.contains(username))
+		if(username.contains((CharSequence) user))
 		{
 			throw new UsernameTest("Invalid Special characters");
 		}
@@ -97,11 +97,16 @@ public class Admin {
 			System.out.println("Login Successful");
 		}
 	}
-	public void Login()
+	public void Login() throws UsernameTest
 	{
 		Scanner sc= new Scanner(System.in);
+		List<String> user=Arrays.asList("/","-","_");
 		System.out.println("Enter Username to Log In");
 		username=sc.next();
+		if(username.contains((CharSequence) user))
+		{
+			throw new UsernameTest("Invalid Special characters");
+		}
 		System.out.println("Enter Password");
 		pass=sc.next();
 		try 

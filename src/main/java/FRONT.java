@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class FRONT {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws PIDError,IOException,UsernameTest,PTYPEException{
 		// TODO Auto-generated method stub
 		int n;
 		Scanner s= new Scanner(System.in);
@@ -19,55 +19,50 @@ public class FRONT {
 			if(n1==1)
 			{
 				ad.Info();
-				try
-				{
-					ad.addition();
-				}
-				catch( IOException ioe)
-				{
-					
-				}
+				ad.addition();
 			}
 		}
-		LOGIN obj=new LOGIN();
-		obj.Login();
-		Passenger psngr=new Passenger();
-		psngr.pasdet();
-		
-		String plt;
-		System.out.println("Enter the type/class of Plane's schedule you want to see");
-		System.out.println("E for Economey, B for Business, F fro FirstClass");
-		System.out.println("Enter No if you don't want to see");
-		plt=s.next();
-		if(plt.equals("no")==false)
+		else if (n==2)
 		{
+			LOGIN obj=new LOGIN();
+			obj.Login();
+		
+			int input;
+		System.out.println("Enter 1 if you want to search specific Flight Details\nEnter 2 for adding your details as passenger\nEnter 3 for checking Flight Calender\nEnter 4 for flight reservation\nEnter 5 for ");
+		input=s.nextInt();
+		if(input==1)
+		{
+			Search se=new Search();
+			
+			se.Find();
+			 
+		}
+		if(input==2)
+		{
+			Passenger psngr=new Passenger();
+			psngr.pasdet();
+		}
+		if(input==3)
+		{
+			String plt;
+			System.out.println("Enter the type/class of Plane's schedule you want to see");
+			System.out.println("E for Economey, B for Business, F fro FirstClass");
+			plt=s.next();
 			FlightCalander fc=new FlightCalander(plt);
 			fc.Display(plt);
 		}
-		Search se=new Search();
-		try {
-		se.Find();
+		if(input==4)
+		{
+			Booking bk=new Booking();	
+				bk.reserve();
 		}
-		catch (IOException ioe)
+		if(input==5)
 		{
-			
-		} 
-		Booking bk=new Booking();
-		try
-		{
-			String str;
-			bk.reserve();
-			System.out.println("Enter no if you don't want to cancel the tickets");
-			str=s.next();
-			if(str.equals("no"))
-			{
+			Booking bk=new Booking();
 				bk.cancellation();
-			}
-		}
-		catch(IOException ioe)
-		{
 			
 		}
+		
 	}
-
+	}
 }
