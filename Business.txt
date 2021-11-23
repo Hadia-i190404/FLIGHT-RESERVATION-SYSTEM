@@ -3,3 +3,4 @@
 14/6,919,Islamabad,13,3500,Lahore,
 13/4,821,Islamabad,16,6000,Karachi
 13/6,5846,Quetta,16,3000,Islamabad
+13/4,1254,Quetta,23,3000,Islamabad

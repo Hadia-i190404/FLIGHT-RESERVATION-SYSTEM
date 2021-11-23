@@ -100,13 +100,13 @@ public class Admin {
 	public void Login() throws UsernameTest
 	{
 		Scanner sc= new Scanner(System.in);
-		List<String> user=Arrays.asList("/","-","_");
+			List<String> user=Arrays.asList("/","-","_");
 		System.out.println("Enter Username to Log In");
 		username=sc.next();
-		if(username.contains((CharSequence) user))
+	/*	if(username.contains((CharSequence) user))
 		{
 			throw new UsernameTest("Invalid Special characters");
-		}
+		}*/
 		System.out.println("Enter Password");
 		pass=sc.next();
 		try 
